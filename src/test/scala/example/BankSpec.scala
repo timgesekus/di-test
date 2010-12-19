@@ -1,8 +1,9 @@
 import org.scalatest.Spec
 import org.scalatest.matchers.MustMatchers
 
-import example.Bank
+//import example.Bank
 
+/*
 class BankSpec extends Spec with MustMatchers {
   describe("simple bank") {
     val bank = new Bank
@@ -27,3 +28,4 @@ class BankSpec extends Spec with MustMatchers {
   }
 }
 
+*/
