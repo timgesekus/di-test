@@ -3,18 +3,26 @@ import org.junit.runner.RunWith
 import org.scalatest.junit.JUnitRunner
 import org.scalatest.Spec
 import org.scalatest.matchers.MustMatchers
-import net.liftweb.util.SimpleInjector
-import gesekus.net.ditest.manager.FlightManager
-import net.liftweb.common.Box
-import gesekus.net.ditest.manager.defaultimpl.DefaultFlightManager
-import gesekus.net.ditest.manager.ManagerRegistry
-import gesekus.net.ditest.services.defaultimpl.DefaultFlightService
+import gesekus.net.ditest._
+import component._
+import model._
+import services._
+import services.defaultimpl._
+import manager.defaultimpl._
+
 
 @RunWith(classOf[JUnitRunner])
-class DefaultFlightServiceTest extends Spec with MustMatchers {
-		val managerRegistry = ManagerRegistry()
-		val flightService = new DefaultFlightService(managerRegistry)
+class DefaultFlightServiceTest extends Spec { 
 		describe ("A FlightManager") {
-		  it ("should work") (pending)
+		  it ("should work") {
+		    
+		  }
+		  object FlightServiceContext extends DefaultFlightServiceComponent {
+		    val trackManager  = new DefaultTrackManager
+		    val flightManager = new DefaultFlightManager
+		    
+		  }
+		  ComponentRegistry.flightService.getTrack(5)
 		}
+		
 }
