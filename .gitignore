@@ -9,3 +9,7 @@ target/
 *.swp
 *~
 ! .gitkeep
+/.target
+/.project
+/.cache
+/.classpath
