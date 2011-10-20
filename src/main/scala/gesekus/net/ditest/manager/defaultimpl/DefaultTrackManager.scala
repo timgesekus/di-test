@@ -12,16 +12,16 @@ import scala.collection.mutable.HashMap
  *
  */
 class DefaultTrackManager extends TrackManager {
-	val tracks = HashMap[Int, Track]()
+  val tracks = HashMap[Int, Track]()
   def add(track: Track) = {
-	  tracks += track.trackId -> track
-	}
-	
-  def get(trackId: Int):Option[Track] = { 
+    tracks += track.trackId -> track
+  }
+
+  def get(trackId: Int): Option[Track] = {
     tracks.get(trackId)
   }
 
-  def remove(trackId: Int )  = {
+  def remove(trackId: Int) = {
     tracks -= trackId
   }
 

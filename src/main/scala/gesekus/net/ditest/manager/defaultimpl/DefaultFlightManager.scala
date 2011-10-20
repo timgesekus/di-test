@@ -13,6 +13,7 @@ import scala.collection.mutable.HashMap
  */
 class DefaultFlightManager extends FlightManager {
   val flights = HashMap[Int,Flight]()
+  def foreach[U](f:((Int, gesekus.net.ditest.model.Flight))=>U) : Unit = flights.foreach[U]((e) => f(e._1,e._2))
   def add(flight: Flight) {
     flights += flight.flightId -> flight
   }
