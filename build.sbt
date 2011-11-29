@@ -11,3 +11,5 @@ libraryDependencies += "org.scalatest" %% "scalatest" % "1.6.1" % "test"
 libraryDependencies += "junit" % "junit" % "4.8.1" % "test"
 
 libraryDependencies += "net.liftweb" %% "lift-util" % "2.4-M4" 
+
+libraryDependencies += "org.scala-tools" % "subcut_2.9.0-1" % "0.9"
